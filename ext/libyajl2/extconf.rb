@@ -50,7 +50,7 @@ module Libyajl2Build
 
       # create the implib on windows
       if windows?
-        $LDFLAGS << " -Wl,--export-all-symbols -Wl,--enable-auto-import -Wl,--out-implib=libyajldll.a -Wl,--output-def,libyajl.def"
+        $LDFLAGS << " -Wl,--export-all-symbols -Wl,--enable-auto-import -Wl,--out-implib=libyajldll.a -Wl,--output-def,libyajl.def -lssp"
       end
     end
 
